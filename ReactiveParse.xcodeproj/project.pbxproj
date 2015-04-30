@@ -7,6 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0A0C3BB61AF1D493005FBBB1 /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0A0C3BB41AF1D493005FBBB1 /* Bolts.framework */; };
+		0A0C3BB71AF1D493005FBBB1 /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0A0C3BB41AF1D493005FBBB1 /* Bolts.framework */; };
+		0A0C3BB81AF1D493005FBBB1 /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0A0C3BB51AF1D493005FBBB1 /* Parse.framework */; };
+		0A0C3BB91AF1D493005FBBB1 /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0A0C3BB51AF1D493005FBBB1 /* Parse.framework */; };
+		0A0C3BBD1AF1FF33005FBBB1 /* Box.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0A0C3BBA1AF1FF33005FBBB1 /* Box.framework */; };
+		0A0C3BBE1AF1FF33005FBBB1 /* ReactiveCocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0A0C3BBB1AF1FF33005FBBB1 /* ReactiveCocoa.framework */; };
+		0A0C3BBF1AF1FF33005FBBB1 /* Result.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0A0C3BBC1AF1FF33005FBBB1 /* Result.framework */; };
 		0AF1EACF1AEF6659008C0943 /* ReactiveParse.h in Headers */ = {isa = PBXBuildFile; fileRef = 0AF1EACE1AEF6659008C0943 /* ReactiveParse.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		0AF1EAD51AEF6659008C0943 /* ReactiveParse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0AF1EAC91AEF6659008C0943 /* ReactiveParse.framework */; };
 		0AF1EADC1AEF6659008C0943 /* ReactiveParseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AF1EADB1AEF6659008C0943 /* ReactiveParseTests.swift */; };
@@ -14,8 +21,6 @@
 		0AF1EAE81AEF6684008C0943 /* Store.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AF1EAE51AEF6684008C0943 /* Store.swift */; };
 		0AF1EAE91AEF6684008C0943 /* Query.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AF1EAE61AEF6684008C0943 /* Query.swift */; };
 		0AF1EAEA1AEF6684008C0943 /* Query.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AF1EAE61AEF6684008C0943 /* Query.swift */; };
-		0AF1EAF01AEF675E008C0943 /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0AF1EAED1AEF675E008C0943 /* Parse.framework */; };
-		0AF1EAF11AEF675E008C0943 /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0AF1EAED1AEF675E008C0943 /* Parse.framework */; };
 		0AF1EB2C1AEF6ADE008C0943 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AF1EB2B1AEF6ADE008C0943 /* User.swift */; };
 		0AF1EB2D1AEF6ADE008C0943 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AF1EB2B1AEF6ADE008C0943 /* User.swift */; };
 		0AF1EB2F1AEF6B01008C0943 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0AF1EB2E1AEF6B01008C0943 /* AudioToolbox.framework */; };
@@ -31,12 +36,6 @@
 		0AF1EB591AEF9875008C0943 /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0AF1EB4E1AEF9874008C0943 /* Social.framework */; };
 		0AF1EB5A1AEF9875008C0943 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0AF1EB4F1AEF9874008C0943 /* StoreKit.framework */; };
 		0AF1EB5C1AEF98C9008C0943 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0AF1EB5B1AEF98C9008C0943 /* SystemConfiguration.framework */; };
-		0AF1EBB61AF05F72008C0943 /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0AF1EBB31AF05F72008C0943 /* Bolts.framework */; };
-		0AF1EBB71AF05F72008C0943 /* LlamaKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0AF1EBB41AF05F72008C0943 /* LlamaKit.framework */; };
-		0AF1EBB81AF05F72008C0943 /* ReactiveCocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0AF1EBB51AF05F72008C0943 /* ReactiveCocoa.framework */; };
-		0AF1EBB91AF05F98008C0943 /* ReactiveCocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0AF1EBB51AF05F72008C0943 /* ReactiveCocoa.framework */; };
-		0AF1EBBA1AF05F9C008C0943 /* LlamaKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0AF1EBB41AF05F72008C0943 /* LlamaKit.framework */; };
-		0AF1EBBB1AF05F9E008C0943 /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0AF1EBB31AF05F72008C0943 /* Bolts.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,6 +49,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0A0C3BB41AF1D493005FBBB1 /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Bolts.framework; sourceTree = "<group>"; };
+		0A0C3BB51AF1D493005FBBB1 /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Parse.framework; sourceTree = "<group>"; };
+		0A0C3BBA1AF1FF33005FBBB1 /* Box.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Box.framework; path = "Carthage/Checkouts/Box/build/Debug-iphoneos/Box.framework"; sourceTree = SOURCE_ROOT; };
+		0A0C3BBB1AF1FF33005FBBB1 /* ReactiveCocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ReactiveCocoa.framework; path = "Carthage/Checkouts/ReactiveCocoa/build/Debug-iphoneos/ReactiveCocoa.framework"; sourceTree = SOURCE_ROOT; };
+		0A0C3BBC1AF1FF33005FBBB1 /* Result.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Result.framework; path = "Carthage/Checkouts/Result/build/Debug-iphoneos/Result.framework"; sourceTree = SOURCE_ROOT; };
 		0AF1EAC91AEF6659008C0943 /* ReactiveParse.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ReactiveParse.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		0AF1EACD1AEF6659008C0943 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0AF1EACE1AEF6659008C0943 /* ReactiveParse.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ReactiveParse.h; sourceTree = "<group>"; };
@@ -58,7 +62,6 @@
 		0AF1EADB1AEF6659008C0943 /* ReactiveParseTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReactiveParseTests.swift; sourceTree = "<group>"; };
 		0AF1EAE51AEF6684008C0943 /* Store.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Store.swift; sourceTree = "<group>"; };
 		0AF1EAE61AEF6684008C0943 /* Query.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Query.swift; sourceTree = "<group>"; };
-		0AF1EAED1AEF675E008C0943 /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Parse.framework; sourceTree = "<group>"; };
 		0AF1EB2B1AEF6ADE008C0943 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		0AF1EB2E1AEF6B01008C0943 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 		0AF1EB301AEF6B09008C0943 /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
@@ -74,9 +77,6 @@
 		0AF1EB4E1AEF9874008C0943 /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
 		0AF1EB4F1AEF9874008C0943 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
 		0AF1EB5B1AEF98C9008C0943 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
-		0AF1EBB31AF05F72008C0943 /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Bolts.framework; path = Carthage/Build/iOS/Bolts.framework; sourceTree = SOURCE_ROOT; };
-		0AF1EBB41AF05F72008C0943 /* LlamaKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = LlamaKit.framework; path = Carthage/Build/iOS/LlamaKit.framework; sourceTree = SOURCE_ROOT; };
-		0AF1EBB51AF05F72008C0943 /* ReactiveCocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ReactiveCocoa.framework; path = Carthage/Build/iOS/ReactiveCocoa.framework; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -84,13 +84,15 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0AF1EBB61AF05F72008C0943 /* Bolts.framework in Frameworks */,
+				0A0C3BBD1AF1FF33005FBBB1 /* Box.framework in Frameworks */,
+				0A0C3BBE1AF1FF33005FBBB1 /* ReactiveCocoa.framework in Frameworks */,
+				0A0C3BBF1AF1FF33005FBBB1 /* Result.framework in Frameworks */,
 				0AF1EB5C1AEF98C9008C0943 /* SystemConfiguration.framework in Frameworks */,
 				0AF1EB2F1AEF6B01008C0943 /* AudioToolbox.framework in Frameworks */,
 				0AF1EB501AEF9874008C0943 /* Accounts.framework in Frameworks */,
-				0AF1EBB81AF05F72008C0943 /* ReactiveCocoa.framework in Frameworks */,
 				0AF1EB521AEF9874008C0943 /* CFNetwork.framework in Frameworks */,
 				0AF1EB531AEF9874008C0943 /* CoreGraphics.framework in Frameworks */,
+				0A0C3BB81AF1D493005FBBB1 /* Parse.framework in Frameworks */,
 				0AF1EB541AEF9874008C0943 /* CoreLocation.framework in Frameworks */,
 				0AF1EB551AEF9874008C0943 /* libz.dylib in Frameworks */,
 				0AF1EB561AEF9875008C0943 /* MobileCoreServices.framework in Frameworks */,
@@ -98,9 +100,8 @@
 				0AF1EB581AEF9875008C0943 /* Security.framework in Frameworks */,
 				0AF1EB591AEF9875008C0943 /* Social.framework in Frameworks */,
 				0AF1EB5A1AEF9875008C0943 /* StoreKit.framework in Frameworks */,
-				0AF1EBB71AF05F72008C0943 /* LlamaKit.framework in Frameworks */,
 				0AF1EB311AEF6B09008C0943 /* libsqlite3.dylib in Frameworks */,
-				0AF1EAF01AEF675E008C0943 /* Parse.framework in Frameworks */,
+				0A0C3BB61AF1D493005FBBB1 /* Bolts.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -108,11 +109,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0AF1EBBB1AF05F9E008C0943 /* Bolts.framework in Frameworks */,
 				0AF1EAD51AEF6659008C0943 /* ReactiveParse.framework in Frameworks */,
-				0AF1EBBA1AF05F9C008C0943 /* LlamaKit.framework in Frameworks */,
-				0AF1EBB91AF05F98008C0943 /* ReactiveCocoa.framework in Frameworks */,
-				0AF1EAF11AEF675E008C0943 /* Parse.framework in Frameworks */,
+				0A0C3BB71AF1D493005FBBB1 /* Bolts.framework in Frameworks */,
+				0A0C3BB91AF1D493005FBBB1 /* Parse.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -188,7 +187,8 @@
 		0AF1EBB01AF05EED008C0943 /* Vendor */ = {
 			isa = PBXGroup;
 			children = (
-				0AF1EAED1AEF675E008C0943 /* Parse.framework */,
+				0A0C3BB41AF1D493005FBBB1 /* Bolts.framework */,
+				0A0C3BB51AF1D493005FBBB1 /* Parse.framework */,
 			);
 			name = Vendor;
 			sourceTree = "<group>";
@@ -217,9 +217,9 @@
 		0AF1EBB21AF05F0F008C0943 /* Carthage */ = {
 			isa = PBXGroup;
 			children = (
-				0AF1EBB31AF05F72008C0943 /* Bolts.framework */,
-				0AF1EBB41AF05F72008C0943 /* LlamaKit.framework */,
-				0AF1EBB51AF05F72008C0943 /* ReactiveCocoa.framework */,
+				0A0C3BBC1AF1FF33005FBBB1 /* Result.framework */,
+				0A0C3BBB1AF1FF33005FBBB1 /* ReactiveCocoa.framework */,
+				0A0C3BBA1AF1FF33005FBBB1 /* Box.framework */,
 			);
 			name = Carthage;
 			sourceTree = "<group>";
@@ -460,6 +460,9 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/Frameworks",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
+					"$(PROJECT_DIR)/Carthage/Checkouts/Box/build/Debug-iphoneos",
+					"$(PROJECT_DIR)/Carthage/Checkouts/ReactiveCocoa/build/Debug-iphoneos",
+					"$(PROJECT_DIR)/Carthage/Checkouts/Result/build/Debug-iphoneos",
 				);
 				INFOPLIST_FILE = ReactiveParse/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
@@ -482,6 +485,9 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/Frameworks",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
+					"$(PROJECT_DIR)/Carthage/Checkouts/Box/build/Debug-iphoneos",
+					"$(PROJECT_DIR)/Carthage/Checkouts/ReactiveCocoa/build/Debug-iphoneos",
+					"$(PROJECT_DIR)/Carthage/Checkouts/Result/build/Debug-iphoneos",
 				);
 				INFOPLIST_FILE = ReactiveParse/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
