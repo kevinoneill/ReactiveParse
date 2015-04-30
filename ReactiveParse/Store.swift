@@ -11,20 +11,45 @@ import Parse
 
 public struct Store<T : PFObject> {
   
-  public static func save(instance : T) -> SignalProducer<T, NSError> {
-    let save: (_ : T) -> SignalProducer<T, NSError> = { object in
-      return SignalProducer<T, NSError> { observer, disposible in
-        object.saveEventually { success, error in
-          if nil != error {
-            sendError(observer, error!)
-          } else {
-            sendNext(observer, instance)
-            sendCompleted(observer)
-          }
+  public typealias Producer = SignalProducer<T, NSError>
+
+  public static func save(instance : T) -> Producer {
+    return personalize(instance)
+      |> flatMap(FlattenStrategy.Concat) { self.saveEventually($0) }
+  }
+  
+  private static func saveEventually(instance : T) -> Producer {
+    return Producer { observer, disposible in
+      instance.saveEventually { success, error in
+        if nil != error {
+          sendError(observer, error!)
+        } else {
+          sendNext(observer, instance)
+          sendCompleted(observer)
         }
       }
     }
-    
+  }
+  
+  public static func publish(instance : T) -> Producer {
+    return personalize(instance)
+      |> flatMap(FlattenStrategy.Concat) { self.saveInBackground($0) }
+  }
+  
+  private static func saveInBackground(instance : T) -> Producer {
+    return Producer { observer, disposible in
+      instance.saveInBackgroundWithBlock { success, error in
+        if nil != error {
+          sendError(observer, error!)
+        } else {
+          sendNext(observer, instance)
+          sendCompleted(observer)
+        }
+      }
+    }
+  }
+  
+  private static func personalize(instance : T) -> Producer {
     if var userstorage = instance as? UserStorage {
       return User.current()
         |> map { user in
@@ -36,19 +61,18 @@ public struct Store<T : PFObject> {
             }
           }
           return instance
-        }
-        |> flatMap(FlattenStrategy.Concat) { instance in save(instance) }
+      }
     } else {
-      return save(instance)
+      return Producer(value: instance)
     }
   }
 
-  static func find(config : QueryConfig = QueryConfigDefault) -> SignalProducer<[T], NSError> {
+  public static func find(config : QueryConfig = QueryConfigDefault) -> SignalProducer<[T], NSError> {
     let query = T.query(config)
     return self.producer(query)
   }
   
-  static func pin(configuration : QueryConfig = QueryConfigDefault) -> SignalProducer<[T], NSError> {
+  public static func pin(configuration : QueryConfig = QueryConfigDefault) -> SignalProducer<[T], NSError> {
     let query = T.query() {
       return configuration($0)
     }
@@ -63,7 +87,7 @@ public struct Store<T : PFObject> {
     }
   }
   
-  static func pin(items : [T]) -> SignalProducer<[T], NSError> {
+  public static func pin(items : [T]) -> SignalProducer<[T], NSError> {
     return SignalProducer<[T], NSError> { observer, disposible in
       T.pinAllInBackground(items, block: { result, error in
         if nil != error {
@@ -80,7 +104,7 @@ public struct Store<T : PFObject> {
     return producer(query)
   }
   
-  static func producer(query: PFQuery?) -> SignalProducer<[T], NSError>  {
+  private static func producer(query: PFQuery?) -> SignalProducer<[T], NSError>  {
     
     let request : SignalProducer<[T], NSError>
     
