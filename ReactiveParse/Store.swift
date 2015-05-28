@@ -67,14 +67,14 @@ public struct Store<T : PFObject> {
     }
   }
 
-  public static func find(config : QueryConfig = QueryConfigDefault) -> SignalProducer<[T], NSError> {
+  public static func find(config : QueryConfig) -> SignalProducer<[T], NSError> {
     let query = T.query(config)
     return self.producer(query)
   }
   
-  public static func pin(configuration : QueryConfig = QueryConfigDefault) -> SignalProducer<[T], NSError> {
+  public static func cache(config : QueryConfig) -> SignalProducer<[T], NSError> {
     let query = T.query() {
-      return configuration($0)
+      return config($0)
     }
     
     return self.producer(query)
@@ -99,7 +99,7 @@ public struct Store<T : PFObject> {
     }
   }
   
-  static func local(configuration : QueryConfig) -> SignalProducer<[T], NSError> {
+  public static func local(configuration : QueryConfig) -> SignalProducer<[T], NSError> {
     let query = T.query() { (configuration + QueryConfigLocal)($0) }
     return producer(query)
   }

@@ -11,7 +11,7 @@ import Parse
 
 public typealias QueryConfig = (PFQuery -> Void)
 
-public let QueryConfigDefault : QueryConfig = { $0 }
+public let QueryConfigAll : QueryConfig = { $0 }
 public let QueryConfigLocal : QueryConfig = { $0.fromLocalDatastore() }
 
 extension PFObject {
