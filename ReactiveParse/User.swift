@@ -17,7 +17,7 @@ protocol ProtectedStorage : UserStorage {
   
 }
 
-public final class User: PFUser, PFSubclassing {
+public final class User: PFUser {
   
   class func current() -> SignalProducer<User, NSError> {
     return SignalProducer<User, NSError> { observer, disposible in
@@ -34,7 +34,7 @@ public final class User: PFUser, PFSubclassing {
   
   static func save<T:PFObject>(object : T) -> SignalProducer<T, NSError> {
     return current()
-      |> flatMap(FlattenStrategy.Concat) { $0.write(object) }
+      .flatMap(FlattenStrategy.Concat) { $0.write(object) }
   }
   
   func write<T:PFObject>(object : T) -> SignalProducer<T, NSError> {

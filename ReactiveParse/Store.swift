@@ -15,7 +15,7 @@ public struct Store<T : PFObject> {
 
   public static func save(instance : T) -> Producer {
     return personalize(instance)
-      |> flatMap(FlattenStrategy.Concat) { self.saveEventually($0) }
+      .flatMap(FlattenStrategy.Concat) { self.saveEventually($0) }
   }
   
   private static func saveEventually(instance : T) -> Producer {
@@ -33,7 +33,7 @@ public struct Store<T : PFObject> {
   
   public static func publish(instance : T) -> Producer {
     return personalize(instance)
-      |> flatMap(FlattenStrategy.Concat) { self.saveInBackground($0) }
+      .flatMap(FlattenStrategy.Concat) { self.saveInBackground($0) }
   }
   
   private static func saveInBackground(instance : T) -> Producer {
@@ -52,9 +52,9 @@ public struct Store<T : PFObject> {
   private static func personalize(instance : T) -> Producer {
     if var userstorage = instance as? UserStorage {
       return User.current()
-        |> map { user in
+        .map { user in
           userstorage.user = user;
-          if let privatestorage = userstorage as? ProtectedStorage {
+          if let _ = userstorage as? ProtectedStorage {
             // if no security has been assigned
             if (instance.ACL == nil) {
               instance.ACL = PFACL(user: user)
@@ -78,12 +78,12 @@ public struct Store<T : PFObject> {
     }
     
     return self.producer(query)
-      |> flatMap(.Merge) {
+      .flatMap(.Merge) {
         let pin = self.pin($0)
         let values = SignalProducer<[T], NSError>(value: $0)
         
         let actions =  SignalProducer<SignalProducer<[T], NSError>, NSError>(values: [pin, values])
-        return actions |> flatten(FlattenStrategy.Merge)
+        return actions.flatten(FlattenStrategy.Merge)
     }
   }
   

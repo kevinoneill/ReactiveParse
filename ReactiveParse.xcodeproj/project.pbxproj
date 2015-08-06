@@ -11,7 +11,6 @@
 		0A0C3BB71AF1D493005FBBB1 /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0A0C3BB41AF1D493005FBBB1 /* Bolts.framework */; };
 		0A0C3BB81AF1D493005FBBB1 /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0A0C3BB51AF1D493005FBBB1 /* Parse.framework */; };
 		0A0C3BB91AF1D493005FBBB1 /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0A0C3BB51AF1D493005FBBB1 /* Parse.framework */; };
-		0A0C3BBD1AF1FF33005FBBB1 /* Box.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0A0C3BBA1AF1FF33005FBBB1 /* Box.framework */; };
 		0A0C3BBE1AF1FF33005FBBB1 /* ReactiveCocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0A0C3BBB1AF1FF33005FBBB1 /* ReactiveCocoa.framework */; };
 		0A0C3BBF1AF1FF33005FBBB1 /* Result.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0A0C3BBC1AF1FF33005FBBB1 /* Result.framework */; };
 		0AF1EACF1AEF6659008C0943 /* ReactiveParse.h in Headers */ = {isa = PBXBuildFile; fileRef = 0AF1EACE1AEF6659008C0943 /* ReactiveParse.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -51,7 +50,6 @@
 /* Begin PBXFileReference section */
 		0A0C3BB41AF1D493005FBBB1 /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Bolts.framework; sourceTree = "<group>"; };
 		0A0C3BB51AF1D493005FBBB1 /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Parse.framework; sourceTree = "<group>"; };
-		0A0C3BBA1AF1FF33005FBBB1 /* Box.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Box.framework; path = "Carthage/Checkouts/Box/build/Debug-iphoneos/Box.framework"; sourceTree = SOURCE_ROOT; };
 		0A0C3BBB1AF1FF33005FBBB1 /* ReactiveCocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ReactiveCocoa.framework; path = "Carthage/Checkouts/ReactiveCocoa/build/Debug-iphoneos/ReactiveCocoa.framework"; sourceTree = SOURCE_ROOT; };
 		0A0C3BBC1AF1FF33005FBBB1 /* Result.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Result.framework; path = "Carthage/Checkouts/Result/build/Debug-iphoneos/Result.framework"; sourceTree = SOURCE_ROOT; };
 		0AF1EAC91AEF6659008C0943 /* ReactiveParse.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ReactiveParse.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -84,7 +82,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0A0C3BBD1AF1FF33005FBBB1 /* Box.framework in Frameworks */,
 				0A0C3BBE1AF1FF33005FBBB1 /* ReactiveCocoa.framework in Frameworks */,
 				0A0C3BBF1AF1FF33005FBBB1 /* Result.framework in Frameworks */,
 				0AF1EB5C1AEF98C9008C0943 /* SystemConfiguration.framework in Frameworks */,
@@ -219,7 +216,6 @@
 			children = (
 				0A0C3BBC1AF1FF33005FBBB1 /* Result.framework */,
 				0A0C3BBB1AF1FF33005FBBB1 /* ReactiveCocoa.framework */,
-				0A0C3BBA1AF1FF33005FBBB1 /* Box.framework */,
 			);
 			name = Carthage;
 			sourceTree = "<group>";
@@ -280,11 +276,13 @@
 		0AF1EAC01AEF6659008C0943 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				LastSwiftUpdateCheck = 0700;
 				LastUpgradeCheck = 0630;
 				ORGANIZATIONNAME = "Kevin O'Neill";
 				TargetAttributes = {
 					0AF1EAC81AEF6659008C0943 = {
 						CreatedOnToolsVersion = 6.3.1;
+						DevelopmentTeam = Z7BZBSJBEL;
 					};
 					0AF1EAD31AEF6659008C0943 = {
 						CreatedOnToolsVersion = 6.3.1;
@@ -396,9 +394,9 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
 				MTL_ENABLE_DEBUG_INFO = YES;
-				ONLY_ACTIVE_ARCH = YES;
+				ONLY_ACTIVE_ARCH = NO;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -438,7 +436,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -452,6 +450,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
@@ -477,6 +476,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
